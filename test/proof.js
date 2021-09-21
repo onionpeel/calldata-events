@@ -25,7 +25,7 @@ describe("Proof", function () {
   it('Creates a recipient object for each address with its percentage', async () => {
     recipients = signers.map((signer, i) => {
       return {
-        recipient: signer.address,
+        address: signer.address,
         percentage: percentages[i]
       };
     });
@@ -37,7 +37,7 @@ describe("Proof", function () {
     let txRec = await tx.wait(1);
     recipientEvents = txRec.events.map((recipientObj, i) => {
       let list = {
-        recipient: txRec.events[i].args[0],
+        address: txRec.events[i].args[0],
         percentage: txRec.events[i].args[1].toString()
       };
       return list;

@@ -18,6 +18,8 @@
     "hardhat-gas-reporter": "^1.0.4"
   },
   "dependencies": {
+    "crypto-js": "^4.1.1",
+    "keccak256": "^1.0.3",
     "merkletreejs": "^0.2.24",
     "web3-utils": "^1.5.2"
   }
